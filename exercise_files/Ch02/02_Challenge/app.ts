@@ -32,11 +32,9 @@ function addTodoItem(todo: string): TodoItem {
 }
 
 function getNextId(items: TodoItem[]): number {
-  let test = '';
   return items.reduce((max, x) => (x.id > max ? max : x.id), 0) + 1;
 }
 
 const newTodo = addTodoItem('Buy lots of stuff with all the money we make from the app');
 
 console.log(JSON.stringify(newTodo));
-
